@@ -7,12 +7,7 @@ plugins {
     `maven-publish`
 }
 
-// Current KFF version
-val kff_version: String by project
-val kffMaxVersion = "${kff_version.split('.')[0].toInt() + 1}.0.0"
-
 val mc_version: String by project
-val forge_version: String by project
 
 java.toolchain.languageVersion.set(JavaLanguageVersion.of(21))
 
@@ -51,10 +46,6 @@ extensions.getByType(net.minecraftforge.gradle.userdev.UserDevExtension::class).
     }
 }
 
-repositories {
-    mavenLocal()
-}
-
 dependencies {
     minecraft(libs.forge)
 
@@ -74,6 +65,22 @@ dependencies {
     api(projects.forge.kffmod)
 
     implementation("net.sf.jopt-simple:jopt-simple:5.0.4") { version { strictly("5.0.4") } }
+}
+
+// maven.repo.local is set within the Julia script in the website branch
+tasks.create("publishAllMavens") {
+    dependsOn(":forge:publishToMavenLocal")
+    dependsOn(":forge:kfflib:publishToMavenLocal")
+    dependsOn(":forge:kfflang:publishToMavenLocal")
+    dependsOn(":forge:kffmod:publishToMavenLocal")
+}
+
+fun DependencyHandler.jarJarLib(dependencyNotation: Provider<out ExternalModuleDependency>) {
+    val dep = dependencyNotation.get().copy()
+    jarJar("${dep.group}:${dep.name}:[${dep.version},)") {
+        jarJar.pin(this, dep.version!!)
+        isTransitive = false
+    }
 }
 
 tasks {
@@ -119,31 +126,3 @@ publishing {
 }
 
 fun DependencyHandler.minecraft(dependencyNotation: Any): Dependency? = add("minecraft", dependencyNotation)
-
-// maven.repo.local is set within the Julia script in the website branch
-tasks.create("publishAllMavens") {
-    dependsOn(":forge:publishToMavenLocal")
-    dependsOn(":forge:kfflib:publishToMavenLocal")
-    dependsOn(":forge:kfflang:publishToMavenLocal")
-    dependsOn(":forge:kffmod:publishToMavenLocal")
-}
-
-fun DependencyHandler.jarJarLib(dependencyNotation: Provider<out ExternalModuleDependency>) {
-    val dep = dependencyNotation.get().copy()
-    jarJar("${dep.group}:${dep.name}:[${dep.version},)") {
-        jarJar.pin(this, dep.version!!)
-        isTransitive = false
-    }
-}
-
-fun DependencyHandler.include(dep: Dependency): Dependency {
-    api(dep) // Add module metadata compileOnly dependency
-    jarJar(dep.copy()) {
-        if (this is ModuleDependency) {
-            isTransitive = false
-        }
-        jarJar.pin(this, version)
-        jarJar.ranged(this, "[$version,$kffMaxVersion)")
-    }
-    return dep
-}
