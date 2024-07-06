@@ -7,3 +7,6 @@ It is not a traditional Maven, here are the steps to publishing a new version:
 contains "website" folder for the "site" branch and "KotlinForForge" for the "4.x" branch)
 
 2. Run update_maven.jl with Julia
+```shell
+julia update_maven.jl <kff mod branch folder>
+```
