@@ -61,10 +61,6 @@ minecraft {
     }
 }
 
-val nonMcLibs: Configuration by configurations.creating {
-    exclude(module = "annotations")
-}
-
 repositories {
     mavenLocal()
 }
@@ -72,14 +68,25 @@ repositories {
 dependencies {
     minecraft(libs.forge)
 
-    configurations.getByName("api").extendsFrom(nonMcLibs)
-
-    // Default classpath
-    nonMcLibs(libs.kotlin.stdlib.jdk8)
-    nonMcLibs(libs.kotlin.reflect)
+    // Maven dependencies
+    api(libs.kotlin.reflect)
+    api(libs.kotlin.stdlib.asProvider())
+    api(libs.kotlin.stdlib.jdk7)
+    api(libs.kotlin.stdlib.jdk8)
+    api(libs.kotlinx.coroutines.core.asProvider())
+    api(libs.kotlinx.coroutines.core.jvm)
+    api(libs.kotlinx.coroutines.jdk8)
+    api(libs.kotlinx.serialization.core)
+    api(libs.kotlinx.serialization.json)
 
     // Hack fix for now, force jopt-simple to be exactly 5.0.4 because Mojang ships that version, but some transitive dependencies request 6.0+
     implementation("net.sf.jopt-simple:jopt-simple:5.0.4") { version { strictly("5.0.4") } }
+}
+
+fun DependencyHandlerScope.mavenDep(reflect: Provider<out Dependency>) {
+    api(reflect) {
+        isTransitive = false
+    }
 }
 
 tasks {

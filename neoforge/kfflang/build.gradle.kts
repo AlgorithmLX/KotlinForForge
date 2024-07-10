@@ -15,11 +15,16 @@ repositories {
 dependencies {
     implementation(libs.fancymodloader)
 
-    // Default classpath
-    api(libs.kotlin.stdlib)
+    // Maven dependencies
+    api(libs.kotlin.reflect)
+    api(libs.kotlin.stdlib.asProvider())
     api(libs.kotlin.stdlib.jdk7)
     api(libs.kotlin.stdlib.jdk8)
-    api(libs.kotlin.reflect)
+    api(libs.kotlinx.coroutines.core.asProvider())
+    api(libs.kotlinx.coroutines.core.jvm)
+    api(libs.kotlinx.coroutines.jdk8)
+    api(libs.kotlinx.serialization.core)
+    api(libs.kotlinx.serialization.json)
 }
 
 tasks.withType<Jar> {
