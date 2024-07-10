@@ -1,3 +1,7 @@
+## Kotlin for Forge 5.4.0
+- Updated to serialization 1.7.1
+- Bumped version to fix missing coroutines and serialization with NeoForge maven artifact.
+
 ## Kotlin for Forge 5.3.0
 - Added Minecraft Forge support (1.21+ only)
 - Updated to serialization 1.7.0
