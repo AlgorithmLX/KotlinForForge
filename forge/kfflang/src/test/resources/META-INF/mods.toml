@@ -14,12 +14,6 @@ Kotlin for Forge. Allows mods to use the Kotlin programming language.
 '''
 
 [[dependencies.kfflangtest]]
-modId="forge"
-mandatory=true
-versionRange="[${min_forge_version},)"
-ordering="NONE"
-side="BOTH"
-[[dependencies.kfflangtest]]
 modId="minecraft"
 mandatory=true
 versionRange="[${min_mc_version},${unsupported_mc_version})"
