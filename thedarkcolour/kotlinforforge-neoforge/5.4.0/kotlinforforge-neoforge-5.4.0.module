@@ -88,10 +88,10 @@
           "name": "kotlinforforge-neoforge-5.4.0-all.jar",
           "url": "kotlinforforge-neoforge-5.4.0-all.jar",
           "size": 6306611,
-          "sha512": "c4e48cbd62c60e6129986804c908763bfdb74c6613b90957bbcb48d868a4cdc1eb76630ebf3e84c4c3028013e71a861a4bc678f7b97466e1f056655f2510d51d",
-          "sha256": "be914d97bfdb86c9b6ed5f60a2cab9e5d5ef839ede15d1efaa9e781610677fea",
-          "sha1": "15f326d4499f5fc585a4b0bc506ce5e65415ea97",
-          "md5": "e95aec78edcc6d9e7dc3bf8a6bb902ce"
+          "sha512": "2e5edeea98d16f40942138c498eff3dcc365b0f58042e9d4950cc2fb65826ecce672698a318ee04be65b8fb08adac525b12c91d65d459dca0371df27b3f5e5ca",
+          "sha256": "67b97ba85aab33c7185be18648ad0ba1dd4da4d146cb72be53bb6a7c54a1c683",
+          "sha1": "ec9257af1d76150df2e0596379bf2564976a9f23",
+          "md5": "2c4d80a7ee2f00ca2e436377ed0d0918"
         }
       ]
     }

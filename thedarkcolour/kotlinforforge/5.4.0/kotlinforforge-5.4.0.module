@@ -88,10 +88,10 @@
           "name": "kotlinforforge-5.4.0-all.jar",
           "url": "kotlinforforge-5.4.0-all.jar",
           "size": 6306611,
-          "sha512": "418344c0da0026425c09f1ea2d2194b534d6199d05492aaf579f641269af3c07a2d81adf98fb4225ce6ca675366e33d0821ffcf11cdd83093668ec3e2f60556a",
-          "sha256": "78eb6614ad8237849acd171b45ff0dd60db7d7826aabe62a9aa75d6b6f1253d8",
-          "sha1": "d8e181e852a6fd8ff74cce924ea05e15099f853c",
-          "md5": "753f6fd3b19322f3a6e379cf05eab6f7"
+          "sha512": "ba51f3d09136416afed8cfc9785ef9b9460b4902b36b0cad81d53aaef53dfbd700da466943b8d51ea8cb17876248c3e7ffafb044df1f25c4e20c46cb14e555a5",
+          "sha256": "4ad45f5c57ec01f76d2b8b95b27cece31865904dcbb7b512495f68c8c75fb75b",
+          "sha1": "091c44541d6e8e8ff8c919f1e24ef67cdfc40afb",
+          "md5": "b1f93e21eb3fd81c33953daa4cc1c564"
         }
       ]
     }

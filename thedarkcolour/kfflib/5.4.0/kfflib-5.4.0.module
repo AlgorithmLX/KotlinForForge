@@ -30,10 +30,10 @@
           "name": "kfflib-5.4.0.jar",
           "url": "kfflib-5.4.0.jar",
           "size": 41497,
-          "sha512": "76aab28cfb79f1f56c0cbfebb4f346e26eb00a5c0b2dd43d55cbb194e32d4fb891078e91377ebc858b628e9afa256a5a80a38e530789c41ba49d76e3d3b8ed1a",
-          "sha256": "4350e04c9265d5b1f3076fd971adbf5add597ea44f17cf590aed6cee18a60730",
-          "sha1": "dcf9826a8dacce3beee986e53039f85596a43461",
-          "md5": "9dc46b439dfcaad80b4c0580ea0ee8f2"
+          "sha512": "2eefdefa6ac4aa0f059f4bd58d72e2c18de81085744049e46a05798494540ad78d4569bd0a0dd85df652a1123fe19c51b41196e16ad7a6c15a8bfa59dee034b8",
+          "sha256": "2bd26fc311b427b3919cd222dc94d8df74acc48823b116212fcaa94c8af47e94",
+          "sha1": "083fc35c18f4ac837716c94d27c2e83479a701ba",
+          "md5": "ab738bfed75670673b1b6c871c558767"
         }
       ]
     },
@@ -53,10 +53,10 @@
           "name": "kfflib-5.4.0.jar",
           "url": "kfflib-5.4.0.jar",
           "size": 41497,
-          "sha512": "76aab28cfb79f1f56c0cbfebb4f346e26eb00a5c0b2dd43d55cbb194e32d4fb891078e91377ebc858b628e9afa256a5a80a38e530789c41ba49d76e3d3b8ed1a",
-          "sha256": "4350e04c9265d5b1f3076fd971adbf5add597ea44f17cf590aed6cee18a60730",
-          "sha1": "dcf9826a8dacce3beee986e53039f85596a43461",
-          "md5": "9dc46b439dfcaad80b4c0580ea0ee8f2"
+          "sha512": "2eefdefa6ac4aa0f059f4bd58d72e2c18de81085744049e46a05798494540ad78d4569bd0a0dd85df652a1123fe19c51b41196e16ad7a6c15a8bfa59dee034b8",
+          "sha256": "2bd26fc311b427b3919cd222dc94d8df74acc48823b116212fcaa94c8af47e94",
+          "sha1": "083fc35c18f4ac837716c94d27c2e83479a701ba",
+          "md5": "ab738bfed75670673b1b6c871c558767"
         }
       ]
     },
