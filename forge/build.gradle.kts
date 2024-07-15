@@ -18,7 +18,7 @@ configurations {
         artifacts.clear()
     }
     runtimeElements {
-        // Include subprojects as transitive runtime dependencies
+        // Only include the subprojects as transitive runtime dependencies
         setExtendsFrom(hashSetOf(configurations.getByName("api")))
         // Publish the jarJar
         artifacts.clear()
@@ -121,6 +121,10 @@ publishing {
             suppressAllPomMetadataWarnings() // Shush
             from(components["java"])
             artifactId = "kotlinforforge"
+
+            artifact(tasks.jar) {
+                classifier = "slim"
+            }
         }
     }
 }

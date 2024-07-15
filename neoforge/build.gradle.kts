@@ -14,13 +14,12 @@ java.toolchain.languageVersion.set(JavaLanguageVersion.of(21))
 
 jarJar.enable()
 
-// Only publish "-all" variant
 configurations {
     apiElements {
         artifacts.clear()
     }
     runtimeElements {
-        // Include subprojects as transitive runtime dependencies
+        // Only include the subprojects as transitive runtime dependencies
         setExtendsFrom(hashSetOf(configurations.getByName("api")))
         // Publish the jarJar ONLY
         artifacts.clear()
@@ -104,6 +103,10 @@ publishing {
         register<MavenPublication>("maven") {
             from(components["java"])
             artifactId = "kotlinforforge-neoforge"
+
+            artifact(tasks.jar) {
+                classifier = "slim"
+            }
         }
     }
 }
