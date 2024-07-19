@@ -59,9 +59,8 @@ plugins {
 
 repositories {
     // Add KFF Maven repository
-    maven {
+    maven("https://thedarkcolour.github.io/KotlinForForge/") {
         name = "Kotlin for Forge"
-        setUrl("https://thedarkcolour.github.io/KotlinForForge/")
     }
 }
 
